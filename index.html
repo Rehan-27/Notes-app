@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Up-Note</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+        integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <style>
+        .container {
+            padding-top: 10px;
+            border: 1px solid rgb(175, 84, 228);
+            background-color: rgba(227, 207, 236, 0.5);
+            min-height: 80vh;
+            border-radius: 5px;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Navbar  -->
+    <nav class="navbar navbar-dark bg-dark justify-content-between sticky-top">
+        <a class="navbar-brand text-light">Up-Note <span><img src="logo.png" alt="logo"></span></a>
+        <form class="form-inline">
+            <input class="form-control mr-sm-2" type="search" id="searchTxt" placeholder="Search by keyword"
+                aria-label="Search">
+            <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+        </form>
+    </nav>
+
+    <!-- note add area  -->
+
+    <div class="container my-4">
+        <form>
+            <div class="form-group">
+                <h6>Node Title:</h6>
+                <div class="form-group">
+                    <textarea class="form-control" id="addTitle" rows="1"></textarea>
+                </div>
+                <h6>Note Description:</h6>
+                <div class="form-group">
+                    <textarea class="form-control" id="addTxt" onkeyup="manage(this)" rows="3"></textarea>
+                    <button type="button" id="addBtn" class="btn btn-success mt-3" disabled>Add</button>
+                </div>
+            </div>
+        </form>
+        <hr>
+        <h4> Your Notes-</h4>
+        <hr>
+        <!-- notes section  -->
+
+        <div id="notes" class="container-fluid d-flex justify-content-between flex-wrap row ">
+            <!-- note cards are adding dynamically by Js -->
+        </div>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+        integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+        integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+        crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+        integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+        crossorigin="anonymous"></script>
+    <script src="app.js"></script>
+</body>
+
+</html>
